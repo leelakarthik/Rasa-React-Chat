@@ -12,7 +12,7 @@ export async function getData(msg) {
   };
   let data = "";
   try {
-    const res = await fetch("http://localhost:5005/webhooks/rest/webhook", req);
+    const res = await fetch("http://rasa:5005/webhooks/rest/webhook", req);
     data = await res.json();
     console.log(data);
   } catch (err) {
@@ -40,6 +40,7 @@ export function getMessageArray(messages, value) {
 */
 export function dataSpread(data, len) {
   let result = [];
+  data = JSON.parse(data);
   data.forEach((element) => {
     result.push({
       id: len++,
