@@ -1,22 +1,21 @@
 FROM node:alpine
 
-RUN mkdir /app
-
-
 WORKDIR /app
 
+ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json /app
+COPY package.json ./
+COPY package-lock.json ./
 
+RUN npm install 
+RUN npm install react-scripts
 
-RUN npm install
-
-
-COPY . /app
+COPY . .
 
 ENV PORT=3000
 
 EXPOSE 3000
 
+CMD ["npm", "start"]
 
-RUN npm run build
+
