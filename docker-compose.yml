@@ -1,9 +1,0 @@
-version: "3.9"
-services:
-  web:
-    image: leelakarthik/react-chat:latest
-    volumes:
-      - "./react-app/"
-    ports:
-      - "3000:3000"
- 

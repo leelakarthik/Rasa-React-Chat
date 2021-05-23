@@ -42,7 +42,6 @@ export function getMessageArray(messages, value) {
 export function dataSpread(data, len) {
   let result = [];
   try{
-  data = JSON.parse(data);
   data.forEach((element) => {
     result.push({
       id: len++,
