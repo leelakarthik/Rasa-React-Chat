@@ -1,13 +1,67 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  place-items: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #000000; */
 }
 
+/* div#title {
+  background-color: rgb(1, 130, 243);
+  color: #ffffff;
+}
+div#root {
+  background-color: #000000;
+} */
+/* *{
+  background-color: #000000;
+} */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.main {
+  position: relative;
+  /* background-color: #000000; */
+}
+.input-group {
+  position: absolute;
+}
+#chatArea {
+  display: block;
+  height: 580px;
+  overflow: auto;
+}
+.mychat {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+.rasaChat {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
 }
